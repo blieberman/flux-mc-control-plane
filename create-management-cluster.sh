@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -ex
 
-kind create cluster --name management --config ~/kind-with-custom-registry.yaml
-flux install
+k3d cluster create build
+
+helm repo add fluxcd-community https://fluxcd-community.github.io/helm-charts
+helm install flux fluxcd-community/flux2 -n flux-system --create-namespace
+
 kubectl apply -f control-plane/gitrepo.yaml
 kubectl apply -f control-plane/ks.yaml
