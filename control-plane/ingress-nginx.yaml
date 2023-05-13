@@ -10,6 +10,6 @@ spec:
       chart: ingress-nginx
       sourceRef:
         kind: HelmRepository
-        name: ingress-nginx
+        name: bitnami
   interval: 1m0s
   targetNamespace: default
