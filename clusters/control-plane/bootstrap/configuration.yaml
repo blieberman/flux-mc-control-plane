@@ -5,9 +5,10 @@ metadata:
   name: control-plane
   namespace: flux-system
 spec:
-  interval: 6h
-  path: ./control-plane
-  prune: true
+  interval: 5m
   sourceRef:
     kind: GitRepository
     name: control-plane
+  path: ./clusters/control-plane/config
+  prune: true
+  validation: client

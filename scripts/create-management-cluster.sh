@@ -7,5 +7,5 @@ k3d cluster create build
 helm repo add fluxcd-community https://fluxcd-community.github.io/helm-charts
 helm install flux fluxcd-community/flux2 -n flux-system --create-namespace
 
-kubectl apply -f control-plane/gitrepo.yaml
-kubectl apply -f control-plane/ks.yaml
+kubectl apply -f control-plane/bootstrap/gitrepo.yaml
+kubectl apply -f control-plane/bootstrap/configuration.yaml

@@ -1,7 +1,0 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-resources:
-  - helm-repositories/helmrepository-bitnami.yaml
-  - helm-repositories/helmrepository-jetstack.yaml
-  - gitrepo.yaml
-  - ks.yaml
