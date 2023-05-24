@@ -7,7 +7,7 @@ spec:
   interval: 5m
   sourceRef:
     kind: GitRepository
-    name: kubernetes
+    name: control-plane
   path: ./applications/helm-repositories
   prune: true
   validation: client

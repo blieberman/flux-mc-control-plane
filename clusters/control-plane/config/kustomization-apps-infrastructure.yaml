@@ -9,7 +9,7 @@ spec:
   interval: 5m
   sourceRef:
     kind: GitRepository
-    name: kubernetes
-  path: ../applications/infrastructure
+    name: control-plane
+  path: ./applications/infrastructure
   prune: true
   validation: client
